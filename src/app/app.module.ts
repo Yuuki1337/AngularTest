@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { HightlightDirective } from './hightlight.directive';
+import { DisplayListDirective } from './display-list.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    MovieListComponent,
+    HightlightDirective,
+    DisplayListDirective
   ],
   imports: [
     BrowserModule,
