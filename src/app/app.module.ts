@@ -8,6 +8,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { HightlightDirective } from './hightlight.directive';
 import { DisplayListDirective } from './display-list.directive';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router'
+import { ROUTES } from './app.routes'
 
 @NgModule({
   declarations: [
@@ -16,12 +19,14 @@ import { DisplayListDirective } from './display-list.directive';
     UserProfileComponent,
     MovieListComponent,
     HightlightDirective,
-    DisplayListDirective
+    DisplayListDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

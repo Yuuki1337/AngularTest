@@ -5,7 +5,7 @@ import { Directive, ElementRef,OnInit,Renderer2,HostBinding, HostListener } from
 })
 export class HightlightDirective implements OnInit {
 
-  @HostBinding ('class.yellow') myBackgroundColor:boolean
+  @HostBinding('class.yellow') myBackgroundColor:boolean
   
   constructor(private elRef:ElementRef, private renderer:Renderer2) { }
 
