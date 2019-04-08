@@ -9,14 +9,14 @@ import { CocktailService } from '../cocktail.service';
 })
 export class CocktailListComponent implements OnInit {
 
-liste
+public cocktails
 
-  constructor(public cocktails: CocktailService) { }
+  constructor(public cocktail: CocktailService) { }
 
   initCocktail(): any {
-    this.liste = this.cocktails.getCocktails()
-    console.log(this.liste)
-    return this.liste;
+    this.cocktails = this.cocktail.getCocktails()
+    console.log(this.cocktails)
+    return this.cocktails;
     
   }
   ngOnInit() {
