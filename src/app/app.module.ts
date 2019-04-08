@@ -10,7 +10,9 @@ import { HightlightDirective } from './hightlight.directive';
 import { DisplayListDirective } from './display-list.directive';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router'
-import { ROUTES } from './app.routes'
+import { ROUTES } from './app.routes';
+import { CocktailListComponent } from './cocktail-list/cocktail-list.component'
+import { CocktailService } from './cocktail.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ROUTES } from './app.routes'
     MovieListComponent,
     HightlightDirective,
     DisplayListDirective,
-    MenuComponent
+    MenuComponent,
+    CocktailListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { ROUTES } from './app.routes'
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
