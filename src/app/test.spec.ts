@@ -48,7 +48,7 @@ describe('Quest Test Suite', () => {
         const compiled = fixture.debugElement.nativeElement;
         const content = compiled.textContent;
         const first = fixture.componentInstance.cocktails[0];
-       
+        expect(content).toContain(name);
       }
     )
   );
