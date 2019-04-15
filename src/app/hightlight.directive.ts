@@ -13,6 +13,10 @@ export class HightlightDirective implements OnInit {
    // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue')
   }
 
+
+
+
+
   @HostListener ('mouseenter') mouseEnterEvent (eventData:Event){
     this.myBackgroundColor = true
    

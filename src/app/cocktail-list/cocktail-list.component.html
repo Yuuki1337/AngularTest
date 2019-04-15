@@ -2,7 +2,7 @@
   cocktail-list works!
 </p>
 <div *ngFor="let first of cocktails">
-  <li>{{first.name}},  {{first.price}}</li>
+  <li>{{first.name}},  {{first.price}} <img [src] ="first.img"></li>
 </div>
-  <button (click)="initCocktail()">Click</button>
+
 

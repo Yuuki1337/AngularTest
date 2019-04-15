@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router'
 import { ROUTES } from './app.routes';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component'
 import { CocktailService } from './cocktail.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CocktailService } from './cocktail.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(ROUTES)

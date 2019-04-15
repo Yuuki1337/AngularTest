@@ -9,19 +9,31 @@ import { CocktailService } from '../cocktail.service';
 })
 export class CocktailListComponent implements OnInit {
 
-public cocktails
+  private service: CocktailService
+  public cocktails = []
 
-  constructor(public cocktail: CocktailService) { }
+
+  constructor(public param_service: CocktailService) {
+
+    this.service = param_service
+  }
+ 
 
   initCocktail(): any {
-    this.cocktails = this.cocktail.getCocktails()
-    console.log(this.cocktails)
-    return this.cocktails;
-    
-  }
-  ngOnInit() {
-    this.initCocktail()
 
+
+  }
+
+
+  ngOnInit() {
+
+    this.service.getCocktails().subscribe((param_message) => {
+
+      this.cocktails = param_message
+
+    })
   }
 
 }
+
+
