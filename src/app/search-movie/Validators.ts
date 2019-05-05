@@ -37,7 +37,7 @@ export function rangeDateValidator(min: Date,max: Date){
           return null;
         } else {
           // 'min' is the error key 
-          return { 'min': { value: control.value, expected: min } };
+          return { 'min': { value: control.value, expected: this.value<max && this.value>min } };
     
         }
       };
