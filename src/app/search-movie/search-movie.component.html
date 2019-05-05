@@ -1,0 +1,42 @@
+<form [formGroup]="filmListe" (ngSubmit)="onSubmit()" #myForm="ngForm">
+<div class= "title" formGroupName="title">
+<label>
+  Identifiant:
+  <input name="identifiant"   formControlName="identifiant">
+</label>
+<label>
+  Titre:
+  <input name="titre"  formControlName ="titre">
+</label>
+<div *ngIf="submitted && filmListe.controls['title'].errors?.isRequired">
+    <span >L'un des deux champs 'Identifiant' ou 'Titre' doit être renseigné</span>
+  </div>
+</div> 
+
+
+ 
+<label for="type">Choose a type:</label>
+
+<select formControlName="type">
+   
+    <option *ngFor="let item of typeList" [ngValue]="item">{{item}}</option>
+</select>
+
+<label>
+  Release Date:
+  <input name="date" formControlName="releaseDate" type="date">
+</label>
+<div *ngIf="submitted && filmListe.controls.releaseDate.errors">
+  <span *ngIf="filmListe.controls.releaseDate.errors.min">"L'année doit être comprise entre {{dateMin}} et {{maxDate | date:'yyyy'}} "</span>
+</div>
+
+<label for="fiche">Choose description type:</label>
+
+<select formControlName="fiche">
+   
+    <option *ngFor="let item of descList" [ngValue]="item">{{item}}</option>
+</select>
+
+
+<button type="submit">Submit</button>
+</form>

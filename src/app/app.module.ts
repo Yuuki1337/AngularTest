@@ -14,6 +14,10 @@ import { ROUTES } from './app.routes';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component'
 import { CocktailService } from './cocktail.service';
 import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+
 
 @NgModule({
   declarations: [
@@ -24,14 +28,17 @@ import { HttpClientModule } from '@angular/common/http'
     HightlightDirective,
     DisplayListDirective,
     MenuComponent,
-    CocktailListComponent
+    CocktailListComponent,
+    SearchMovieComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule
   ],
   providers: [CocktailService],
   bootstrap: [AppComponent]
