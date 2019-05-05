@@ -9,11 +9,11 @@ import { isRequiredValidator, rangeDateValidator } from './Validators'
   styleUrls: ['./search-movie.component.css']
 })
 export class SearchMovieComponent implements OnInit {
-  
+
   dateMin = 1900
   descList = ["Courte","Complète"]
   typeList = ["Série", "Films", "Episodes"]
-  minDate = new Date(1900)
+  minDate = new Date(1900,1,1)
   maxDate = new Date()
   submitted = false
   

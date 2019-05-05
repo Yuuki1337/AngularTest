@@ -27,7 +27,7 @@
   <input name="date" formControlName="releaseDate" type="date">
 </label>
 <div *ngIf="submitted && filmListe.controls.releaseDate.errors">
-  <span *ngIf="filmListe.controls.releaseDate.errors.min">"L'année doit être comprise entre {{dateMin}} et {{maxDate | date:'yyyy'}} "</span>
+  <span *ngIf="filmListe.controls.releaseDate.errors.min">"L'année doit être comprise entre {{minDate | date:'yyyy'}} et {{maxDate | date:'yyyy'}} "</span>
 </div>
 
 <label for="fiche">Choose description type:</label>
