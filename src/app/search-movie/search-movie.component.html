@@ -1,4 +1,4 @@
-<form [formGroup]="filmListe" (ngSubmit)="filmListe.valid && onSubmit(filmListe.value)" #myForm="ngForm">
+<form [formGroup]="filmListe" (ngSubmit)="onSubmit(filmListe.value)" #myForm="ngForm">
 <div class= "title" formGroupName="title">
 <label>
   Identifiant:
