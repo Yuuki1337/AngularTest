@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormArray } from '@angular/forms'
+import { FormControl, Validators, FormArray, FormGroup, AbstractControl } from '@angular/forms'
 import { FormBuilder,FormsModule} from '@angular/forms'
 import { Validator } from '@angular/forms'
 import { isRequiredValidator, rangeDateValidator } from './Validators'
@@ -18,7 +18,7 @@ export class SearchMovieComponent implements OnInit {
   submitted = false
   
 
-  filmListe = this.fb.group({
+  filmListe : AbstractControl = this.fb.group({
     title : this.fb.group({
       identifiant: ['', Validators.required],
       titre: ['',Validators.required],
