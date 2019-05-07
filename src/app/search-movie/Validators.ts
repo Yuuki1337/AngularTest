@@ -14,7 +14,7 @@ export function isRequiredValidator(identifiant, titre): ValidatorFn {
         
             if(value1 == "" && value2 == ""){
 
-                return { 'isRequired':{value: false , expected: true}}
+                return { 'isRequired':{value: false , expected: `L'un des deux champs ${identifiant} ou ${titre} doit être rempli`}}
 
     }
         
@@ -37,7 +37,7 @@ export function rangeDateValidator(min: Date,max: Date){
           return null;
         } else {
           // 'min' is the error key 
-          return { 'min': { value: control.value, expected: this.value<max && this.value>min } };
+          return { 'min': { value: control.value, expected: `La date doit être comprise entre ${min.getFullYear()} et ${max.getFullYear()}`} };
     
         }
       };
